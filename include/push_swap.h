@@ -6,7 +6,7 @@
 /*   By: paola <paola@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 18:03:52 by paola             #+#    #+#             */
-/*   Updated: 2024/05/21 15:51:28 by paola            ###   ########.fr       */
+/*   Updated: 2024/05/21 17:19:48 by paola            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,13 @@ typedef struct s_stack_node
 char			**ft_split_mod(char *str, char separator);
 //*** Handle errors-free ***
 void			free_matrix(char **argv);
-void			error_free(t_stack_node **a, char **argv, bool flag_argc_2);
+void			error_free(t_stack_node **a, char **argv, bool flag);
 void			free_stack(t_stack_node **stack);
 int				error_repetition(t_stack_node *a, int nbr);
 int				error_syntax(char *str_nbr);
 void			msg_error(void);
 //*** Stack creation ***
-void			stack_init(t_stack_node **a, char **argv, bool flag_argc_2);
+void			stack_init(t_stack_node **a, char **argv, bool flag);
 void			init_nodes(t_stack_node *a, t_stack_node *b);
 void			set_current_position(t_stack_node *stack);
 void			set_price(t_stack_node *a, t_stack_node *b);

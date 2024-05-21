@@ -6,7 +6,7 @@
 /*   By: paola <paola@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 20:57:22 by utente            #+#    #+#             */
-/*   Updated: 2024/05/21 15:21:36 by paola            ###   ########.fr       */
+/*   Updated: 2024/05/21 17:16:07 by paola            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ void	msg_error(void)
  * because i artificially made Up
  * equal to argv
 */
-void	error_free(t_stack_node **a, char **argv, bool flag_argc_2)
+void	error_free(t_stack_node **a, char **argv, bool flag)
 {
 	free_stack(a);
-	if (flag_argc_2)
+	if (flag)
 		free_matrix(argv);
 	msg_error();
 	exit(1);

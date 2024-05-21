@@ -6,7 +6,7 @@
 /*   By: paola <paola@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 09:42:38 by utente            #+#    #+#             */
-/*   Updated: 2024/05/21 15:27:30 by paola            ###   ########.fr       */
+/*   Updated: 2024/05/21 17:19:34 by paola            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static long	ft_atol(const char *str)
  * 	🏁 Flag is useful cause if true, i have the argv in the HEAP to free
  *
 */
-void	stack_init(t_stack_node **a, char **argv, bool flag_argc_2)
+void	stack_init(t_stack_node **a, char **argv, bool flag)
 {
 	long	nbr;
 	int		i;
@@ -63,15 +63,15 @@ void	stack_init(t_stack_node **a, char **argv, bool flag_argc_2)
 	while (argv[i])
 	{
 		if (error_syntax(argv[i]))
-			error_free(a, argv, flag_argc_2);
+			error_free(a, argv, flag);
 		nbr = ft_atol(argv[i]);
 		if (nbr > INT_MAX || nbr < INT_MIN)
-			error_free(a, argv, flag_argc_2);
+			error_free(a, argv, flag);
 		if (error_repetition(*a, (int)nbr))
-			error_free(a, argv, flag_argc_2);
+			error_free(a, argv, flag);
 		append_node(a, (int)nbr);
 		++i;
 	}
-	if (flag_argc_2)
+	if (flag)
 		free_matrix(argv);
 }
