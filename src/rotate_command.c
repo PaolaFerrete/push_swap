@@ -6,7 +6,7 @@
 /*   By: paola <paola@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 10:07:07 by utente            #+#    #+#             */
-/*   Updated: 2024/05/15 14:18:03 by paola            ###   ########.fr       */
+/*   Updated: 2024/05/21 13:26:45 by paola            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,14 @@ void	ra(t_stack_node **a, bool checker)
 {
 	rotate(a);
 	if (!checker)
-		printf("ra\n");
+		ft_putstr_fd("ra\n", 1);
 }
 
 void	rb(t_stack_node **b, bool checker)
 {
 	rotate(b);
 	if (!checker)
-		printf("rb\n");
+		ft_putstr_fd("rb\n", 1);
 }
 
 void	rr(t_stack_node **a, t_stack_node **b, bool checker)
@@ -51,6 +51,6 @@ void	rr(t_stack_node **a, t_stack_node **b, bool checker)
 	rotate(b);
 	if (!checker)
 	{
-		printf("rr\n");
+		ft_putstr_fd("rr\n", 1);
 	}
 }
