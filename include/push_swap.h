@@ -6,7 +6,7 @@
 /*   By: paola <paola@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 18:03:52 by paola             #+#    #+#             */
-/*   Updated: 2024/05/21 12:21:19 by paola            ###   ########.fr       */
+/*   Updated: 2024/05/21 14:09:33 by paola            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ void			error_free(t_stack_node **a, char **argv, bool flag_argc_2);
 void			free_stack(t_stack_node **stack);
 int				error_repetition(t_stack_node *a, int nbr);
 int				error_syntax(char *str_nbr);
+void			msg_error(void);
 
 //*** Stack creation ***
 void			stack_init(t_stack_node **a, char **argv, bool flag_argc_2);

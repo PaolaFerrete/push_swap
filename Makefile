@@ -6,7 +6,7 @@
 #    By: paola <paola@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/14 18:05:45 by paola             #+#    #+#              #
-#    Updated: 2024/05/21 12:22:27 by paola            ###   ########.fr        #
+#    Updated: 2024/05/21 14:04:53 by paola            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ INCLUDE = ./include
 
 # files sources and objects
 SRC_FILES = error_free.c \
-			split.c \
+			split_modified.c \
 			push_command.c \
 			push_swap_command.c \
 			push_swap_init.c \

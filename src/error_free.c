@@ -6,7 +6,7 @@
 /*   By: paola <paola@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 20:57:22 by utente            #+#    #+#             */
-/*   Updated: 2024/05/15 14:06:12 by paola            ###   ########.fr       */
+/*   Updated: 2024/05/21 14:09:01 by paola            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
+
+void	msg_error(void)
+{
+	ft_putstr_fd("Error\n", 2);
+}
+
 
 /*
  * Ad hoc function to free the 2D array
@@ -63,7 +69,7 @@ void	error_free(t_stack_node **a, char **argv, bool flag_argc_2)
 	free_stack(a);
 	if (flag_argc_2)
 		free_matrix(argv);
-	write(2, "Error\n", 6);
+	msg_error();
 	exit(1);
 }
 
