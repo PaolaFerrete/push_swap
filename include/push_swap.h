@@ -6,7 +6,7 @@
 /*   By: paola <paola@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 18:03:52 by paola             #+#    #+#             */
-/*   Updated: 2024/05/21 15:26:53 by paola            ###   ########.fr       */
+/*   Updated: 2024/05/21 15:51:28 by paola            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ typedef struct s_stack_node
 {
 	int					value;
 	int					current_position;
-	int					final_index;
 	int					push_price;
 	bool				above_median;
 	bool				cheapest;
