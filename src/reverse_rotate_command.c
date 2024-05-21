@@ -6,7 +6,7 @@
 /*   By: paola <paola@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 10:24:35 by utente            #+#    #+#             */
-/*   Updated: 2024/05/21 13:28:45 by paola            ###   ########.fr       */
+/*   Updated: 2024/05/21 13:56:26 by paola            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,5 @@ void	rrr(t_stack_node **a, t_stack_node **b, bool checker)
 	reverse_rotate(a);
 	reverse_rotate(b);
 	if (!checker)
-		ft_putstr_fd("rr\n", 1);
+		ft_putstr_fd("rrr\n", 1);
 }
