@@ -6,7 +6,7 @@
 /*   By: paola <paola@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 18:03:52 by paola             #+#    #+#             */
-/*   Updated: 2024/05/21 14:09:33 by paola            ###   ########.fr       */
+/*   Updated: 2024/05/21 15:26:53 by paola            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define PUSH_SWAP_H
 
 # include "../libft/include/libft.h"
+# include <stdio.h>
+# include <stddef.h>
 # include <stdlib.h>
 # include <limits.h>
 # include <stdbool.h>
@@ -34,7 +36,6 @@ typedef struct s_stack_node
 
 //*** Handle input ./push_swap "1 -42 1337" ***
 char			**ft_split_mod(char *str, char separator);
-
 //*** Handle errors-free ***
 void			free_matrix(char **argv);
 void			error_free(t_stack_node **a, char **argv, bool flag_argc_2);
@@ -42,14 +43,12 @@ void			free_stack(t_stack_node **stack);
 int				error_repetition(t_stack_node *a, int nbr);
 int				error_syntax(char *str_nbr);
 void			msg_error(void);
-
 //*** Stack creation ***
 void			stack_init(t_stack_node **a, char **argv, bool flag_argc_2);
 void			init_nodes(t_stack_node *a, t_stack_node *b);
 void			set_current_position(t_stack_node *stack);
 void			set_price(t_stack_node *a, t_stack_node *b);
 void			set_cheapest(t_stack_node *b);
-
 //*** linked list utils ***
 void			append_node(t_stack_node **stack, int nbr);
 t_stack_node	*find_last_node(t_stack_node *head);
@@ -58,12 +57,10 @@ t_stack_node	*return_cheapest(t_stack_node *stack);
 bool			stack_sorted(t_stack_node *stack);
 int				stack_len(t_stack_node *stack);
 void			finish_rotation(t_stack_node **s, t_stack_node *n, char c);
-
 //*** Algorithms ***
 void			tiny_sort(t_stack_node **a);
 void			handle_five(t_stack_node **a, t_stack_node **b);
 void			push_swap(t_stack_node **a, t_stack_node **b);
-
 //*** Commands ***
 void			sa(t_stack_node **a, bool checker);
 void			sb(t_stack_node **b, bool checker);

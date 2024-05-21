@@ -3,17 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap_command.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: utente <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: paola <paola@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 11:47:02 by utente            #+#    #+#             */
-/*   Updated: 2023/04/06 11:28:51 by utente           ###   ########.fr       */
+/*   Updated: 2024/05/21 15:25:43 by paola            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-#include <stdbool.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include "../include/push_swap.h"
 
 /*
  * Loop decays once
@@ -43,7 +40,7 @@ static void	reverse_rotate_both(t_stack_node **a,
 }
 
 /*
- * Conclude the rotation of the stacks 
+ * Conclude the rotation of the stacks
 */
 void	finish_rotation(t_stack_node **stack,
 							t_stack_node *top_node,
@@ -64,7 +61,7 @@ void	finish_rotation(t_stack_node **stack,
 				rb(stack, false);
 			else
 				rrb(stack, false);
-		}	
+		}
 	}
 }
 
@@ -91,7 +88,7 @@ static void	move_nodes(t_stack_node **a, t_stack_node **b)
 }
 
 /*
- * ~Push all nodes in B 
+ * ~Push all nodes in B
  * ~For every configuration choose the "cheapest_node"
  * ~Push everything back in A in order
 */

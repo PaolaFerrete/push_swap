@@ -6,20 +6,16 @@
 /*   By: paola <paola@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 20:57:22 by utente            #+#    #+#             */
-/*   Updated: 2024/05/21 14:21:56 by paola            ###   ########.fr       */
+/*   Updated: 2024/05/21 15:21:36 by paola            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-#include <stdlib.h>
-#include <stdio.h>
-#include <unistd.h>
+#include "../include/push_swap.h"
 
 void	msg_error(void)
 {
 	ft_putstr_fd("Error\n", 2);
 }
-
 
 /*
  * Matrix starts from -1

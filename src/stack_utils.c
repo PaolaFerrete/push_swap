@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   stack_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: utente <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: paola <paola@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 09:49:59 by utente            #+#    #+#             */
-/*   Updated: 2023/04/03 19:29:16 by utente           ###   ########.fr       */
+/*   Updated: 2024/05/21 15:27:47 by paola            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-#include <limits.h>
+#include "../include/push_swap.h"
 
 t_stack_node	*find_last_node(t_stack_node *head)
 {
@@ -23,7 +22,7 @@ t_stack_node	*find_last_node(t_stack_node *head)
 }
 
 /*
- * Search for the last node and append 
+ * Search for the last node and append
  * 🚨 Pay attention if the stack empty?
 */
 void	append_node(t_stack_node **stack, int nbr)
@@ -75,7 +74,7 @@ t_stack_node	*find_smallest(t_stack_node *stack)
 }
 
 /*
- * Return the cheapest node 
+ * Return the cheapest node
  * that is already flagged
 */
 t_stack_node	*return_cheapest(t_stack_node *stack)

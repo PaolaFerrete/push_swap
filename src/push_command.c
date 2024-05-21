@@ -6,11 +6,11 @@
 /*   By: paola <paola@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 10:36:47 by utente            #+#    #+#             */
-/*   Updated: 2024/05/21 14:02:51 by paola            ###   ########.fr       */
+/*   Updated: 2024/05/21 15:24:49 by paola            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../include/push_swap.h"
 
 /*
  * Push a node to the top from src to dest

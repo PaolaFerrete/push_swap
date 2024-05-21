@@ -6,14 +6,11 @@
 /*   By: paola <paola@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 09:42:38 by utente            #+#    #+#             */
-/*   Updated: 2024/05/15 09:27:16 by paola            ###   ########.fr       */
+/*   Updated: 2024/05/21 15:27:30 by paola            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-#include <limits.h>
-#include <stdlib.h>
-#include <stdio.h>
+#include "../include/push_swap.h"
 
 /*
  *  atol, i need it to check eventual overflows

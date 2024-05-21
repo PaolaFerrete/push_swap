@@ -6,7 +6,7 @@
 /*   By: paola <paola@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 10:29:09 by pferrete          #+#    #+#             */
-/*   Updated: 2024/05/20 19:28:31 by paola            ###   ########.fr       */
+/*   Updated: 2024/05/21 15:19:55 by paola            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ char	*ft_strdup(const char *s);
 char	*ft_substr(const char *s, unsigned int start, size_t len);
 /*return a pointer with two concateneted strings */
 char	*ft_strjoin(const char *s1, const char *s2);
-/*return a pointer which has a trim string*/ 
+/*return a pointer which has a trim string*/
 char	*ft_strtrim(char const *s1, char const *set);
 /*retorn a ponteir to ponter with strigs split*/
 char	**ft_split(char const *s, char c);

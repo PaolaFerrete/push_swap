@@ -6,12 +6,12 @@
 /*   By: paola <paola@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 10:07:07 by utente            #+#    #+#             */
-/*   Updated: 2024/05/21 13:26:45 by paola            ###   ########.fr       */
+/*   Updated: 2024/05/21 15:26:24 by paola            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-#include <stdio.h>
+#include "../include/push_swap.h"
+
 /*
  * Top node to bottom position
 */

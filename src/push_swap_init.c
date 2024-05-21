@@ -6,7 +6,7 @@
 /*   By: paola <paola@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 12:02:48 by utente            #+#    #+#             */
-/*   Updated: 2024/05/15 14:26:41 by paola            ###   ########.fr       */
+/*   Updated: 2024/05/21 15:16:54 by paola            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,7 +110,7 @@ void	set_price(t_stack_node *a, t_stack_node *b)
 void	set_cheapest(t_stack_node *b)
 {
 	long			best_match_value;
-	t_stack_node	*best_match_node=NULL;
+	t_stack_node	*best_match_node;
 
 	if (NULL == b)
 		return ;

@@ -6,15 +6,11 @@
 /*   By: paola <paola@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 14:21:18 by paola             #+#    #+#             */
-/*   Updated: 2024/05/21 14:21:47 by paola            ###   ########.fr       */
+/*   Updated: 2024/05/21 15:22:40 by paola            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-#include <stdlib.h>
-#include <stdio.h>
-#include <unistd.h>
-
+#include "../include/push_swap.h"
 
 /*
  * Ad hoc function to free the 2D array

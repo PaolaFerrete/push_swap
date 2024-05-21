@@ -6,14 +6,11 @@
 /*   By: paola <paola@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 09:31:22 by utente            #+#    #+#             */
-/*   Updated: 2024/05/15 14:32:10 by paola            ###   ########.fr       */
+/*   Updated: 2024/05/21 15:28:20 by paola            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-#include <limits.h>
-#include <stdbool.h>
-#include <stdio.h>
+#include "../include/push_swap.h"
 
 /*
  * Check if a given stack is sorted
