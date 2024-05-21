@@ -6,7 +6,7 @@
 /*   By: paola <paola@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 20:57:22 by utente            #+#    #+#             */
-/*   Updated: 2024/05/21 14:09:01 by paola            ###   ########.fr       */
+/*   Updated: 2024/05/21 14:21:56 by paola            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,44 +20,6 @@ void	msg_error(void)
 	ft_putstr_fd("Error\n", 2);
 }
 
-
-/*
- * Ad hoc function to free the 2D array
- * created with the ft_split function
- * ATTENTION
- * You have to start from -1
-*/
-void	free_matrix(char **argv)
-{
-	int	i;
-
-	i = -1;
-	if (NULL == argv || NULL == *argv)
-		return ;
-	while (argv[i])
-		free(argv[i++]);
-	free(argv - 1);
-}
-
-/*
- * Ad hoc function to free a stack
-*/
-void	free_stack(t_stack_node **stack)
-{
-	t_stack_node	*tmp;
-	t_stack_node	*current;
-
-	if (NULL == stack)
-		return ;
-	current = *stack;
-	while (current)
-	{
-		tmp = current->next;
-		free(current);
-		current = tmp;
-	}
-	*stack = NULL;
-}
 
 /*
  * Matrix starts from -1
