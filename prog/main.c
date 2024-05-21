@@ -6,7 +6,7 @@
 /*   By: paola <paola@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 18:04:05 by paola             #+#    #+#             */
-/*   Updated: 2024/05/21 10:14:11 by paola            ###   ########.fr       */
+/*   Updated: 2024/05/21 12:21:49 by paola            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	main(int argc, char **argv)
 	if (1 == argc || (2 == argc && !argv[1][0]))
 		return (1);
 	else if (2 == argc)
-		argv = ft_split_modified(argv[1], ' ');
+		argv = ft_split_mod(argv[1], ' ');
 	stack_init(&a, argv + 1, 2 == argc);
 	if (!stack_sorted(a))
 	{

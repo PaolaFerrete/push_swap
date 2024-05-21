@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap_commands.c                                    :+:      :+:    :+:   */
+/*   swap_command.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paola <paola@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/15 09:33:01 by paola             #+#    #+#             */
-/*   Updated: 2024/05/21 10:16:33 by paola            ###   ########.fr       */
+/*   Created: 2023/03/19 09:53:41 by utente            #+#    #+#             */
+/*   Updated: 2024/05/15 14:20:59 by paola            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
 /*
  * ATTENTION
@@ -36,14 +36,14 @@ void	sa(t_stack_node	**a, bool checker)
 {
 	swap(a);
 	if (!checker)
-		 ft_putstr_fd("sa", 1);
+		printf("sa\n");
 }
 
 void	sb(t_stack_node **b, bool checker)
 {
 	swap(b);
 	if (!checker)
-		ft_putstr_fd("sb", 1);
+		printf("sb\n");
 }
 
 void	ss(t_stack_node **a, t_stack_node **b, bool checker)
@@ -51,5 +51,5 @@ void	ss(t_stack_node **a, t_stack_node **b, bool checker)
 	swap(a);
 	swap(b);
 	if (!checker)
-		ft_putstr_fd("ss", 1);
+		printf("ss\n");
 }

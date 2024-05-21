@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_modified.c                                      :+:      :+:    :+:   */
+/*   split.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paola <paola@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/15 09:24:27 by paola             #+#    #+#             */
-/*   Updated: 2024/05/21 10:37:08 by paola            ###   ########.fr       */
+/*   Created: 2023/04/01 19:11:45 by utente            #+#    #+#             */
+/*   Updated: 2024/05/21 12:21:29 by paola            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 #include <stddef.h>
 
 /*
- * count the numbers of words
+ * Args at the command line are
+ * spaced separated strings
 */
 static int	count_words(char *str, char separator)
 {
@@ -41,7 +42,10 @@ static int	count_words(char *str, char separator)
 }
 
 /*
-* get next word in the str
+ * I exploit static variables
+ * which are basically
+ * "Global private variables"
+ * i can access it only via the get_next_word function
 */
 static char	*get_next_word(char *str, char separator)
 {
@@ -66,18 +70,19 @@ static char	*get_next_word(char *str, char separator)
 }
 
 /*
- * Recreate argv that have 2 arguments
- * for this be like a argv with some arguments
- * from ->./out.a "1 2 3"
- * to -> 0/ 1 2 3
- * argv[0] = 0/
- * argv[1] = 1
- * argv[2] = 2
- * argv[3] = 3
- * argv[4] = Null
+ * I recreate an argv in the HEAP
  *
+ * +2 because i want to allocate space
+ * for the "\0" Placeholder and the final NULL
+ *
+ * vector_strings-->[p0]-> "\0" Placeholder to mimic argv
+ * 				 |->[p1]->"Hello"
+ * 				 |->[p2]->"how"
+ * 				 |->[p3]->"Are"
+ * 				 |->[..]->"..""
+ * 				 |->[NULL]
 */
-char	**ft_split_modified(char *str, char separator)
+char	**ft_split_mod(char *str, char separator)
 {
 	int		words_number;
 	char	**vector_strings;

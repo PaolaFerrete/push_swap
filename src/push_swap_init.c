@@ -5,22 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: paola <paola@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/15 09:37:02 by paola             #+#    #+#             */
-/*   Updated: 2024/05/20 20:27:49 by paola            ###   ########.fr       */
+/*   Created: 2023/03/19 12:02:48 by utente            #+#    #+#             */
+/*   Updated: 2024/05/15 14:26:41 by paola            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 #include <limits.h>
 #include <stdbool.h>
 #include <stdio.h>
 
 /*
  * Set the current position of every node
- * such as a index and make true or false if
- * the node is above the middle stack or not
- * 		~0 false
- * 		~1 True
+ * in the current state-configuration
 */
 void	set_current_position(t_stack_node *stack)
 {
@@ -44,11 +41,11 @@ void	set_current_position(t_stack_node *stack)
 }
 
 /*
- * Find the best number to match to the b->value,
- * which was b->value + n, and n could be b->value + 1, or
- * b->value + 2 ... until LONG-MAX.
- * if there aren't, so b->value is bigger than any other num
- * in stack a. So target is the smallest one.
+ *	Best match is..
+ *   | "The Smallest-bigger value" |
+ *
+ *  if no node is Bigger, best_match is the Smallest node.
+ *  TLDR
  *  With this function every node in b gets its target node in a
 */
 static void	set_target_node(t_stack_node *a,
@@ -107,13 +104,13 @@ void	set_price(t_stack_node *a, t_stack_node *b)
 }
 
 /*
- * Looking for the cheapest node price
- * and mark the flag true
+ * Flag the cheapest node in the current
+ * stacks configurations
 */
 void	set_cheapest(t_stack_node *b)
 {
 	long			best_match_value;
-	t_stack_node	*best_match_node;
+	t_stack_node	*best_match_node=NULL;
 
 	if (NULL == b)
 		return ;

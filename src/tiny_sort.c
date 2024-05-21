@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: paola <paola@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/15 09:31:49 by paola             #+#    #+#             */
-/*   Updated: 2024/05/21 10:13:19 by paola            ###   ########.fr       */
+/*   Created: 2023/03/19 09:31:22 by utente            #+#    #+#             */
+/*   Updated: 2024/05/15 14:32:10 by paola            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 #include <limits.h>
 #include <stdbool.h>
 #include <stdio.h>
@@ -83,4 +83,3 @@ void	handle_five(t_stack_node **a, t_stack_node **b)
 		pb(b, a, false);
 	}
 }
- 

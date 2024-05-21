@@ -5,45 +5,72 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: paola <paola@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/15 09:52:01 by paola             #+#    #+#             */
-/*   Updated: 2024/05/21 10:24:11 by paola            ###   ########.fr       */
+/*   Created: 2023/03/18 20:57:22 by utente            #+#    #+#             */
+/*   Updated: 2024/05/15 14:06:12 by paola            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <unistd.h>
 
 /*
- * write error on the screen.
+ * Ad hoc function to free the 2D array
+ * created with the ft_split function
+ * ATTENTION
+ * You have to start from -1
 */
-void	msg_error(void)
+void	free_matrix(char **argv)
 {
-	printf("MSG_ERROR\n");
-	ft_putstr_fd("Error\n", 2);
+	int	i;
+
+	i = -1;
+	if (NULL == argv || NULL == *argv)
+		return ;
+	while (argv[i])
+		free(argv[i++]);
+	free(argv - 1);
 }
 
 /*
- * organizes the free memory and left the program
+ * Ad hoc function to free a stack
+*/
+void	free_stack(t_stack_node **stack)
+{
+	t_stack_node	*tmp;
+	t_stack_node	*current;
+
+	if (NULL == stack)
+		return ;
+	current = *stack;
+	while (current)
+	{
+		tmp = current->next;
+		free(current);
+		current = tmp;
+	}
+	*stack = NULL;
+}
+
+/*
+ * Matrix starts from -1
+ * because i artificially made Up
+ * equal to argv
 */
 void	error_free(t_stack_node **a, char **argv, bool flag_argc_2)
 {
 	free_stack(a);
 	if (flag_argc_2)
 		free_matrix(argv);
-	msg_error();
+	write(2, "Error\n", 6);
 	exit(1);
 }
 
 /*
- * Check if there are some digits mistakes
- * 1. If the first char is not valid
- * 2. If the first char is valid but the second is not
- * 3. If the all char is digits
- 	* ~return 1 -> True
- 	* ~return 0 -> False
+ * Check if there are some syntactical mistakes
 */
-int	error_digit(char *str_nbr)
+int	error_syntax(char *str_nbr)
 {
 	if (!(*str_nbr == '+'
 			|| *str_nbr == '-'
@@ -62,9 +89,7 @@ int	error_digit(char *str_nbr)
 }
 
 /*
- * Check if there are some repetition number in stack value
-	* ~return 1 -> True
-	* ~return 0 -> False
+ * Loop into the stack for some repetition
 */
 int	error_repetition(t_stack_node *a, int nbr)
 {

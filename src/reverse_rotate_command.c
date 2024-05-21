@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   reverse_rotate_commands.c                          :+:      :+:    :+:   */
+/*   reverse_rotate_command.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paola <paola@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/15 09:35:21 by paola             #+#    #+#             */
-/*   Updated: 2024/05/21 10:18:56 by paola            ###   ########.fr       */
+/*   Created: 2023/03/19 10:24:35 by utente            #+#    #+#             */
+/*   Updated: 2024/05/15 14:18:53 by paola            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
 /*
  * Bottom to top
-	* last->prev->next = NULL; ~second next recive null
-	* last->next = *stack; ~third next point to first
-	* last->prev = NULL; ~third recive null
-	*stack = last; ~point to second
-	* last->next->prev = last; ~second prev point to third
 */
 static void	reverse_rotate(t_stack_node **stack)
 {
@@ -40,14 +35,14 @@ void	rra(t_stack_node **a, bool checker)
 {
 	reverse_rotate(a);
 	if (!checker)
-		ft_putstr_fd("rra", 1);
+		printf("rra\n");
 }
 
 void	rrb(t_stack_node **b, bool checker)
 {
 	reverse_rotate(b);
 	if (!checker)
-		ft_putstr_fd("rrb", 1);
+		printf("rrb\n");
 }
 
 void	rrr(t_stack_node **a, t_stack_node **b, bool checker)
@@ -55,5 +50,5 @@ void	rrr(t_stack_node **a, t_stack_node **b, bool checker)
 	reverse_rotate(a);
 	reverse_rotate(b);
 	if (!checker)
-		ft_putstr_fd("rrr", 1);
+		printf("rrr\n");
 }

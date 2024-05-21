@@ -6,7 +6,7 @@
 #    By: paola <paola@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/14 18:05:45 by paola             #+#    #+#              #
-#    Updated: 2024/05/21 11:06:28 by paola            ###   ########.fr        #
+#    Updated: 2024/05/21 12:22:27 by paola            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,16 +23,15 @@ INCLUDE = ./include
 
 # files sources and objects
 SRC_FILES = error_free.c \
-			free.c \
-			ft_modified.c \
-			push_commands.c \
-			push_swap_commands.c \
+			split.c \
+			push_command.c \
+			push_swap_command.c \
 			push_swap_init.c \
-			reverse_rotate_commands.c \
-			rotate_commands.c \
+			reverse_rotate_command.c \
+			rotate_command.c \
 			stack_utils.c \
 			stack_init.c \
-			swap_commands.c \
+			swap_command.c \
 			tiny_sort.c
 
 OBJ_FILES = $(addprefix $(OBJ_DIR)/,$(SRC_FILES:.c=.o))

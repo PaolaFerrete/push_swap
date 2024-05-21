@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_commands.c                                    :+:      :+:    :+:   */
+/*   push_command.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paola <paola@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/15 09:51:27 by paola             #+#    #+#             */
-/*   Updated: 2024/05/21 10:37:41 by paola            ###   ########.fr       */
+/*   Created: 2023/03/19 10:36:47 by utente            #+#    #+#             */
+/*   Updated: 2024/05/15 14:19:33 by paola            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
 /*
  * Push a node to the top from src to dest
- * If stack empty (i.e. NULL)
+ * 🚨 attention If stack empty (i.e. NULL)
 */
 static void	push(t_stack_node **dest, t_stack_node **src)
 {
@@ -44,12 +44,12 @@ void	pa(t_stack_node **a, t_stack_node **b, bool checker)
 {
 	push(a, b);
 	if (!checker)
-		ft_putstr_fd("pa", 1);
+		printf("pa\n");
 }
 
 void	pb(t_stack_node **b, t_stack_node **a, bool checker)
 {
 	push(b, a);
 	if (!checker)
-		ft_putstr_fd("pb", 1);
+		printf("pb\n");
 }

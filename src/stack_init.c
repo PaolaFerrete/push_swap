@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stacks_init.c                                      :+:      :+:    :+:   */
+/*   stack_init.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: paola <paola@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/15 09:33:48 by paola             #+#    #+#             */
-/*   Updated: 2024/05/21 10:22:54 by paola            ###   ########.fr       */
+/*   Created: 2023/04/02 09:42:38 by utente            #+#    #+#             */
+/*   Updated: 2024/05/15 09:27:16 by paola            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 #include <limits.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -22,11 +22,11 @@
 static long	ft_atol(const char *str)
 {
 	long	num;
-	int		sign;
+	int		isneg;
 	int		i;
 
 	num = 0;
-	sign = 1;
+	isneg = 1;
 	i = 0;
 	while (str[i] && (str[i] == ' ' || str[i] == '\t'
 			|| str[i] == '\n' || str[i] == '\r'
@@ -36,7 +36,7 @@ static long	ft_atol(const char *str)
 		i++;
 	else if (str[i] == '-')
 	{
-		sign *= -1;
+		isneg *= -1;
 		i++;
 	}
 	while (str[i] >= '0' && str[i] <= '9')
@@ -44,15 +44,18 @@ static long	ft_atol(const char *str)
 		num = (num * 10) + (str[i] - '0');
 		i++;
 	}
-	return (num * sign);
+	return (num * isneg);
 }
 
 /*
  * Create the stack with the command line values
- * Checks errors
-
+ * Checks are embedded in the creation itslef
+ * 		~Duplicate values
+ * 		~Over|Underflow
+ * 		~Syntax errors
  *
- * Flag is useful because if true, free matrix
+ * 	🏁 Flag is useful cause if true, i have the argv in the HEAP to free
+ *
 */
 void	stack_init(t_stack_node **a, char **argv, bool flag_argc_2)
 {
@@ -62,7 +65,7 @@ void	stack_init(t_stack_node **a, char **argv, bool flag_argc_2)
 	i = 0;
 	while (argv[i])
 	{
-		if (error_digit(argv[i]))
+		if (error_syntax(argv[i]))
 			error_free(a, argv, flag_argc_2);
 		nbr = ft_atol(argv[i]);
 		if (nbr > INT_MAX || nbr < INT_MIN)
