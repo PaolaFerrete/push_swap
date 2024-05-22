@@ -6,7 +6,7 @@
 /*   By: paola <paola@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 10:07:07 by utente            #+#    #+#             */
-/*   Updated: 2024/05/21 15:26:24 by paola            ###   ########.fr       */
+/*   Updated: 2024/05/22 10:03:00 by paola            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 
 /*
  * Top node to bottom position
+	* 	last_node->next = *stack; ~third point to first
+	* 	*stack = (*stack)->next; ~point to second
+	* 	(*stack)->prev = NULL; ~third prev recive null
+	* 	last_node->next->prev = last_node; ~first prev point to third
+	* 	last_node->next->next = NULL; ~first next recive null
 */
 static void	rotate(t_stack_node **stack)
 {

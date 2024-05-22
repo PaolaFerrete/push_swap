@@ -6,7 +6,7 @@
 /*   By: paola <paola@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 12:02:48 by utente            #+#    #+#             */
-/*   Updated: 2024/05/21 15:16:54 by paola            ###   ########.fr       */
+/*   Updated: 2024/05/22 10:01:32 by paola            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,11 @@ void	set_current_position(t_stack_node *stack)
 }
 
 /*
- *	Best match is..
- *   | "The Smallest-bigger value" |
- *
- *  if no node is Bigger, best_match is the Smallest node.
- *  TLDR
+ * Find the best number to match to the b->value,
+ * which was b->value + n, and n could be b->value + 1, or
+ * b->value + 2 ... until LONG-MAX.
+ * if there aren't, so b->value is bigger than any other num
+ * in stack a. So target is the smallest one.
  *  With this function every node in b gets its target node in a
 */
 static void	set_target_node(t_stack_node *a,

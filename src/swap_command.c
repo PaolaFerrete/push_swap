@@ -6,15 +6,22 @@
 /*   By: paola <paola@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 09:53:41 by utente            #+#    #+#             */
-/*   Updated: 2024/05/21 15:28:00 by paola            ###   ########.fr       */
+/*   Updated: 2024/05/22 10:04:29 by paola            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
 /*
- * ATTENTION
- * There may be only 2 nodes
+ * reverses the positions of the two first nodes
+ 	* head = (*head)->next; ~point to second
+	* (*head)->prev->prev = *head; ~prev first point to second
+	* (*head)->prev->next = (*head)->next; ~second next point to first
+	* if ((*head)->next)
+	*	(*head)->next->prev = (*head)->prev; ~first next point to third
+	* (*head)->next = (*head)->prev; ~second next point to first
+	* (*head)->prev = NULL; ~second prev recive null
+
 */
 static void	swap(t_stack_node **head)
 {

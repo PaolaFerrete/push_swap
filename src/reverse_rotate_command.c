@@ -6,7 +6,7 @@
 /*   By: paola <paola@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/19 10:24:35 by utente            #+#    #+#             */
-/*   Updated: 2024/05/21 15:26:01 by paola            ###   ########.fr       */
+/*   Updated: 2024/05/22 10:02:30 by paola            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 
 /*
  * Bottom to top
+	* last->prev->next = NULL; ~second next recive null
+	* last->next = *stack; ~third next point to first
+	* last->prev = NULL; ~third recive null
+	*stack = last; ~point to second
+	* last->next->prev = last; ~second prev point to third
 */
 static void	reverse_rotate(t_stack_node **stack)
 {

@@ -6,7 +6,7 @@
 /*   By: paola <paola@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 09:49:59 by utente            #+#    #+#             */
-/*   Updated: 2024/05/21 15:27:47 by paola            ###   ########.fr       */
+/*   Updated: 2024/05/22 10:05:14 by paola            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ t_stack_node	*find_last_node(t_stack_node *head)
 
 /*
  * Search for the last node and append
- * 🚨 Pay attention if the stack empty?
 */
 void	append_node(t_stack_node **stack, int nbr)
 {
